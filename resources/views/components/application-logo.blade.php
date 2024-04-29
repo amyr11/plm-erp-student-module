@@ -1,0 +1,1 @@
+<img {{ $attributes }} class="w-fit h-fit" src="{{ asset('img/plm-seal.png') }}" alt="PLM Seal">

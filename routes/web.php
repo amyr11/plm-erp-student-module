@@ -6,9 +6,9 @@ Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('credential-generation', 'credential-generation')
+Route::view('credential-generation-dashboard', 'credential-generation-dashboard')
     ->middleware(['auth', 'verified'])
-    ->name('credential-generation');
+    ->name('credential-generation-dashboard');
 
 Route::view('profile', 'profile')
     ->middleware(['auth'])

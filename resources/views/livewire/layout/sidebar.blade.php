@@ -94,8 +94,8 @@ new class extends Component
                         </svg>
                         <span class="ms-3">Dashboard</span>
                     </x-side-nav-link>
-                    <x-side-nav-link :href="route('credential-generation')"
-                        :active="request()->routeIs('credential-generation')" wire:navigate>
+                    <x-side-nav-link :href="route('credential-generation-dashboard')"
+                        :active="request()->routeIs('credential-generation-dashboard')" wire:navigate>
                         <svg class="w-5 h-5 transition duration-75" aria-hidden="true"
                             xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 22 21">
                             <path

@@ -60,8 +60,8 @@
                 </div>
                 <!-- End "Email all" Button -->
                 <!-- "Edit email template" Button -->
-                <button data-modal-target="edit-email-template-modal" data-modal-toggle="edit-email-template-modal"
-                    type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+                <button data-modal-target="edit-email-template-modal-sp-account"
+                    data-modal-toggle="edit-email-template-modal-sp-account" type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
                 focus:ring-blue-300 font-medium rounded-lg text-xs px-2 py-1 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 
                 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -84,7 +84,7 @@
                 </button>
                 <!-- End "Edit email template" Button -->
                 <!-- Email Template Modal -->
-                <div id="edit-email-template-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
+                <div id="edit-email-template-modal-sp-account" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
             justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] 
                 max-h-full">
                     <div class="relative p-4 w-full max-w-md max-h-full">
@@ -199,8 +199,8 @@
                 </div>
                 <!-- End "Email all" Button -->
                 <!-- "Edit email template" Button -->
-                <button data-modal-target="edit-email-template-modal" data-modal-toggle="edit-email-template-modal"
-                    type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
+                <button data-modal-target="edit-email-template-modal-plm-email"
+                    data-modal-toggle="edit-email-template-modal-plm-email" type="button" class="text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none 
                 focus:ring-blue-300 font-medium rounded-lg text-xs px-2 py-1 text-center me-2 mb-2 dark:border-blue-500 dark:text-blue-500 
                 dark:hover:text-white dark:hover:bg-blue-500 dark:focus:ring-blue-800 flex items-center">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
@@ -223,7 +223,7 @@
                 </button>
                 <!-- End "Edit email template" Button -->
                 <!-- Email Template Modal -->
-                <div id="edit-email-template-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
+                <div id="edit-email-template-modal-plm-email" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 
             justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] 
                 max-h-full">
                     <div class="relative p-4 w-full max-w-md max-h-full">

@@ -14,10 +14,10 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->timestamps();
-            $table->foreign('college_id')->references('id')->on('colleges');
-            $table->foreign('degree_program_id')->references('id')->on('degree_programs');
-            $table->foreign('birthplace_city_id')->references('id')->on('city');
-            $table->foreign('citizenship_id')->references('id')->on('citizenship');
+            $table->foreignId('college_id')->constrained();
+            $table->foreignId('degree_program_id')->constrained();
+            $table->foreignId('birthplace_city_id')->constrained();
+            $table->foreignId('citizenship_id')->constrained();
             $table->string('student_no', length: 9)->unique();
             $table->string('last_name');
             $table->string('first_name');

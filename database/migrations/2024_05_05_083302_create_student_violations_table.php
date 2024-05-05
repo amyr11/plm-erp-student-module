@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('student_violations', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->string('violation');
             $table->date('violation_date');
             $table->enum('offense_type', allowed: ['Major', 'Minor']); // TODO: Temporary

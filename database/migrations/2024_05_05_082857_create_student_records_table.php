@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('student_records', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreign('student_id')->references('id')->on('students')->onDelete('cascade');
+            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->int('academic_year');
             $table->int('semester');
             $table->date('date_enrolled');

@@ -1,12 +1,13 @@
 <?php
 
+use App\Livewire\ListPendingEmails;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'dashboard')
     ->middleware(['auth', 'verified'])
     ->name('dashboard');
 
-Route::view('credential-generation-dashboard', 'credential-generation-dashboard')
+Route::view('/credential-generation-dashboard', 'credential-generation-dashboard')
     ->middleware(['auth', 'verified'])
     ->name('credential-generation-dashboard');
 

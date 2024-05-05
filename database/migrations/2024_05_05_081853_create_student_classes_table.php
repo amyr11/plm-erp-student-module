@@ -18,8 +18,6 @@ return new class extends Migration
             $table->foreignId('subject_id')->cascadeOnDelete();
             $table->foreignId('building_id');
             $table->int('section');
-            $table->int('academic_year');
-            $table->int('semester');
             $table->enum('day', allowed: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
             $table->time('start_time');
             $table->time('end_time');

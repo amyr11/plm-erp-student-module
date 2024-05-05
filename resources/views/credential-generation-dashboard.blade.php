@@ -45,45 +45,8 @@
                 </script>
             </div>
             <!-- End Buttons Container -->
-            <!-- Pending Credentials Table -->
-            <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">
-                                STUDENT NUMBER
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                STUDENT NAME
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                PLM EMAIL ADDRESS
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                STATUS
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                2020-01234
-                            </th>
-                            <td class="px-6 py-4">
-                                Pacatang, Dana Justine D.
-                            </td>
-                            <td class="px-6 py-4">
-                                djdpacatang2020@plm.edu.ph
-                            </td>
-                            <td class="px-6 py-4">
-                                Pending
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- End Pending Credentials Table -->
+            <!-- Pending Student Portal Credentials Table -->
+            <livewire:pending-emails-student-portal-table />
         </div>
         <!-- End Student Portal Account -->
         <!-- PLM Email -->
@@ -168,57 +131,8 @@
                 <!-- End Email Template Modal -->
             </div>
             <!-- End Buttons Container -->
-            <!-- Pending Credentials Table -->
-            <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-                    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th scope="col" class="px-6 py-3">
-                                STUDENT NUMBER
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                LAST NAME
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                GIVEN NAME
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                MIDDLE NAME
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                ENROLLMENT DATE
-                            </th>
-                            <th scope="col" class="px-6 py-3">
-                                STATUS
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                            <th scope="row"
-                                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                2020-01234
-                            </th>
-                            <td class="px-6 py-4">
-                                Pacatang
-                            </td>
-                            <td class="px-6 py-4">
-                                Dana Justine
-                            </td>
-                            <td class="px-6 py-4">
-                                Decena
-                            </td>
-                            <td class="px-6 py-4">
-                                2020
-                            </td>
-                            <td class="px-6 py-4">
-                                Pending
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- End Pending Credentials Table -->
+            <!-- Pending PLM Email Credentials Table -->
+            <livewire:pending-emails-plm-email-table />
         </div>
         <!-- End PLM Email -->
     </div>

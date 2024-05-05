@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('document_types', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->string('document_name');
             $table->int('price');
         });

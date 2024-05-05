@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('student_requests', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->date('date_requested');
             $table->date('date_of_payment');

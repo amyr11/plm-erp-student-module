@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('pending_email_p_l_m_emails', function (Blueprint $table) {
             $table->id();
+            $table->timestamps();
             $table->foreignId('student_id')->constrained();
         });
     }

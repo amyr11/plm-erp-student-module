@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\PendingEmailsStudentPortal;
+use App\Models\Student;
 use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Tables\Concerns\InteractsWithTable;
@@ -24,8 +25,23 @@ class PendingEmailsStudentPortalTable extends Component implements HasTable, Has
     {
         return $table
             ->query(PendingEmailsStudentPortal::query())
+            ->query(Student::query())
             ->columns([
                 Tables\Columns\TextColumn::make('student_no')
+                    ->label('Student Number')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('last_name')
+                    ->label('Last Name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('first_name')
+                    ->label('First Name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('middle_name')
+                    ->label('Middle Name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('plm_email')
+                    ->label('PLM Email Address')
+                    ->sortable(),
             ]);
     }
 }

@@ -27,7 +27,7 @@ return new class extends Migration
             $table->string('religion');
             $table->enum('civil_status', allowed: ['Single', 'Married', 'Separated', 'Widowed']);
             $table->enum('registration_status', allowed: ['Regular', 'Irregular', 'Dropped', 'Graduated'])->default('Regular');
-            $table->date('entry_year');
+            $table->year('entry_year');
             $table->integer('year_level');
             $table->date('graduation_date')->nullable();
             $table->string('permanent_address');

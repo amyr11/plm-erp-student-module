@@ -17,7 +17,7 @@ return new class extends Migration
             $table->foreignId('college_id')->constrained();
             $table->foreignId('degree_program_id')->constrained();
             $table->foreignId('birthplace_city_id')->constrained();
-            $table->foreignId('citizenship_id')->constrained();
+            $table->foreignId('city_id')->constrained();
             $table->string('student_no', length: 9)->unique();
             $table->string('last_name');
             $table->string('first_name');

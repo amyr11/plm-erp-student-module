@@ -16,11 +16,11 @@ return new class extends Migration
             $table->timestamps();
             $table->date('date_requested');
             $table->date('date_of_payment');
-            $table->integer('amount_paid');
+            $table->float('amount_paid');
             $table->string('receipt_no');
             $table->string('purpose');
             $table->date('expected_release');
-            $table->date('expected_received');
+            $table->date('date_received')->nullable();
         });
     }
 

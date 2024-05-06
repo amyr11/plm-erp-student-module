@@ -22,7 +22,6 @@ return new class extends Migration
             $table->date('birthdate');
             $table->string('religion');
             $table->date('entry_date');
-            $table->integer('year_level');
             $table->date('graduation_date')->nullable();
             $table->string('permanent_address');
             $table->string('plm_email')->unique();

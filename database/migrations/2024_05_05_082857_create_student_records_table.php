@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('student_records', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('academic_year');
             $table->integer('semester');
             $table->date('date_enrolled');
             $table->integer('tuition_fee');

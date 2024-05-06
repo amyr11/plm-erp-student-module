@@ -14,8 +14,8 @@ return new class extends Migration
         Schema::create('assigned_classes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('academic_year');
             $table->integer('semester');
+            $table->float('grade')->nullable();
         });
     }
 

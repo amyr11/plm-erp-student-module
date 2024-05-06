@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('students', function (Blueprint $table) {
             $table->id()->autoIncrement();
             $table->timestamps();
-            $table->foreignId('college_id')->constrained();
             $table->foreignId('degree_program_id')->constrained();
             $table->foreignId('birthplace_city_id')->constrained();
             $table->foreignId('city_id')->constrained();

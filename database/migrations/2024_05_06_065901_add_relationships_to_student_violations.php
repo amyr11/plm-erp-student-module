@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('student_violations', function (Blueprint $table) {
             $table->foreignId('student_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('offense_type_id')->constrained();
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('student_violations', function (Blueprint $table) {
             $table->dropForeign(['student_id']);
+            $table->dropForeign(['offense_type_id']);
         });
     }
 };

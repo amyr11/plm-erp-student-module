@@ -19,11 +19,8 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('middle_name');
             $table->string('suffix')->nullable();
-            $table->enum('biological_sex', allowed: ['Male', 'Female']);
             $table->date('birthdate');
             $table->string('religion');
-            $table->enum('civil_status', allowed: ['Single', 'Married', 'Separated', 'Widowed']);
-            $table->enum('registration_status', allowed: ['Regular', 'Irregular', 'Dropped', 'Graduated'])->default('Regular');
             $table->date('entry_year');
             $table->integer('year_level');
             $table->date('graduation_date')->nullable();

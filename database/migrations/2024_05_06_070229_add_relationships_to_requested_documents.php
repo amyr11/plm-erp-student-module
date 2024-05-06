@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::table('requested_documents', function (Blueprint $table) {
             $table->foreignId('document_type_id')->constrained();
+            $table->foreignId('requested_document_status_id')->constrained();
         });
     }
 
@@ -23,6 +24,7 @@ return new class extends Migration
     {
         Schema::table('requested_documents', function (Blueprint $table) {
             $table->dropForeign(['document_type_id']);
+            $table->dropForeign(['requested_document_status_id']);
         });
     }
 };

@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::table('student_requests', function (Blueprint $table) {
             $table->foreignId('student_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('payment_method_id')->constrained();
+            $table->foreignId('student_request_status_id')->constrained();
         });
     }
 
@@ -23,6 +25,8 @@ return new class extends Migration
     {
         Schema::table('student_requests', function (Blueprint $table) {
             $table->dropForeign(['student_id']);
+            $table->dropForeign(['payment_method_id']);
+            $table->dropForeign(['student_request_status_id']);
         });
     }
 };

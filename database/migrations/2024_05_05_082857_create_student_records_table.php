@@ -28,7 +28,6 @@ return new class extends Migration
             $table->integer('development_fund');
             $table->integer('ang_pamantasan_fee');
             $table->integer('ssc_fee');
-            $table->enum('fee_status', allowed: ['Paid', 'Not yet paid']);
         });
     }
 

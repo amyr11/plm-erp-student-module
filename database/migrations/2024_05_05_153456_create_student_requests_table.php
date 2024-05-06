@@ -16,13 +16,11 @@ return new class extends Migration
             $table->timestamps();
             $table->date('date_requested');
             $table->date('date_of_payment');
-            $table->enum('payment_mode', allowed: ['Cash', 'Online'])->default('Cash');
             $table->integer('amount_paid');
             $table->string('receipt_no');
             $table->string('purpose');
             $table->date('expected_release');
             $table->date('expected_received');
-            $table->enum('status', allowed: ['Pending', 'Ready', 'Claimed'])->default('Pending');
         });
     }
 

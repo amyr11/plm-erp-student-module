@@ -15,10 +15,8 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('section');
-            $table->enum('day', allowed: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
             $table->time('start_time');
             $table->time('end_time');
-            $table->enum('mode', allowed: ['Online', 'Face-to-Face', 'Hybrid']);
             $table->string('room');
         });
     }

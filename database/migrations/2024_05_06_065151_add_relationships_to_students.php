@@ -15,6 +15,9 @@ return new class extends Migration
             $table->foreignId('degree_program_id')->constrained();
             $table->foreignId('birthplace_city_id')->constrained('cities', 'id');
             $table->foreignId('city_id')->constrained();
+            $table->foreignId('biological_sex')->constrained();
+            $table->foreignId('civil_status_id')->constrained();
+            $table->foreignId('registration_status_id')->constrained();
         });
     }
 
@@ -27,6 +30,9 @@ return new class extends Migration
             $table->dropForeign(['degree_program_id']);
             $table->dropForeign(['birthplace_city_id']);
             $table->dropForeign(['city_id']);
+            $table->dropForeign(['biological_sex']);
+            $table->dropForeign(['civil_status_id']);
+            $table->dropForeign(['registration_status_id']);
         });
     }
 };

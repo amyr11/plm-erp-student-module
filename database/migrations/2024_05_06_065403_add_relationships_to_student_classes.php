@@ -15,6 +15,8 @@ return new class extends Migration
             $table->foreignId('professor_id');
             $table->foreignId('subject_id')->cascadeOnDelete();
             $table->foreignId('building_id');
+            $table->foreignId('day_id');
+            $table->foreignId('class_mode_id');
         });
     }
 
@@ -27,6 +29,8 @@ return new class extends Migration
             $table->dropForeign(['professor_id']);
             $table->dropForeign(['subject_id']);
             $table->dropForeign(['building_id']);
+            $table->dropForeign(['day_id']);
+            $table->dropForeign(['class_mode_id']);
         });
     }
 };

@@ -11,14 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('student_violations', function (Blueprint $table) {
+        Schema::create('fee_statuses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('violation');
-            $table->date('violation_date');
-            $table->string('sm_reference');
-            $table->string('resolution'); // TODO: Not sure on data type
-            $table->date('resolution_date');
+            $table->integer('fee_status');
         });
     }
 
@@ -27,6 +23,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('student_violations');
+        Schema::dropIfExists('fee_statuses');
     }
 };

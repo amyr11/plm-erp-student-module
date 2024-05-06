@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->integer('no_of_copies');
-            $table->enum('status', allowed: ['Pending', 'Ready'])->default('Pending');
         });
     }
 

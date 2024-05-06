@@ -64,4 +64,9 @@ class Student extends Model
     {
         return $this->hasMany(StudentViolation::class);
     }
+
+    public function studentRequests(): HasMany
+    {
+        return $this->hasMany(StudentRequest::class);
+    }
 }

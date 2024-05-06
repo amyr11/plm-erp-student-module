@@ -33,6 +33,16 @@ class StudentClass extends Model
         return $this->belongsTo(Building::class);
     }
 
+    public function classMode(): BelongsTo
+    {
+        return $this->belongsTo(ClassMode::class);
+    }
+
+    public function day(): BelongsTo
+    {
+        return $this->belongsTo(Day::class);
+    }
+
     public function students(): BelongsToMany
     {
         return $this->belongsToMany(Student::class, 'assigned_classes');

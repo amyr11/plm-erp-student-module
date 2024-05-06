@@ -20,4 +20,19 @@ class StudentRequest extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function paymentMode(): BelongsTo
+    {
+        return $this->belongsTo(PaymentMode::class);
+    }
+
+    public function studentRequestStatus(): BelongsTo
+    {
+        return $this->belongsTo(StudentRequestStatus::class);
+    }
+
+    public function requestedDocument(): BelongsTo
+    {
+        return $this->belongsTo(RequestedDocument::class);
+    }
 }

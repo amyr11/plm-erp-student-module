@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class RequestedDocumentStatus extends Model
 {
@@ -14,4 +15,9 @@ class RequestedDocumentStatus extends Model
         'created_at',
         'updated_at',
     ];
+
+    public function requestedDocuments(): HasMany
+    {
+        return $this->hasMany(RequestedDocument::class);
+    }
 }

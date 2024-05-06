@@ -35,6 +35,21 @@ class Student extends Model
         return $this->belongsTo(City::class);
     }
 
+    public function biologicalSex(): BelongsTo
+    {
+        return $this->belongsTo(BiologicalSex::class);
+    }
+
+    public function civilStatus(): BelongsTo
+    {
+        return $this->belongsTo(CivilStatus::class);
+    }
+
+    public function registrationStatus(): BelongsTo
+    {
+        return $this->belongsTo(RegistrationStatus::class);
+    }
+
     public function studentFamily(): HasOne
     {
         return $this->hasOne(StudentFamily::class);

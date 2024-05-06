@@ -20,4 +20,9 @@ class StudentViolation extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function offenseType(): BelongsTo
+    {
+        return $this->belongsTo(OffenseType::class);
+    }
 }

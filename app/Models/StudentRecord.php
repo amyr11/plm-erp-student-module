@@ -20,4 +20,9 @@ class StudentRecord extends Model
     {
         return $this->belongsTo(Student::class);
     }
+
+    public function feeStatus(): BelongsTo
+    {
+        return $this->belongsTo(FeeStatus::class);
+    }
 }

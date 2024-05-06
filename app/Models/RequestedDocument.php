@@ -16,8 +16,18 @@ class RequestedDocument extends Model
         'updated_at',
     ];
 
+    public function studentRequest(): BelongsTo
+    {
+        return $this->belongsTo(StudentRequest::class);
+    }
+
     public function documentType(): BelongsTo
     {
         return $this->belongsTo(DocumentType::class);
+    }
+
+    public function requestedDocumentStatus(): BelongsTo
+    {
+        return $this->belongsTo(RequestedDocumentStatus::class);
     }
 }

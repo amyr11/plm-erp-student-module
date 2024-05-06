@@ -41,7 +41,7 @@ class TestMail extends Mailable
     public function content(): Content
     {
         return new Content(
-            view: 'credential-generation-dashboard',
+            view: 'email',
         );
     }
 

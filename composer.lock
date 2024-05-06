@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7281b37950cfee87a3b679d348534fd8",
+    "content-hash": "65a494a41fd3f28c4cb411d0eb1065fb",
     "packages": [
         {
             "name": "anourvalar/eloquent-serialize",
@@ -1439,6 +1439,46 @@
                 "source": "https://github.com/filamentphp/filament"
             },
             "time": "2024-05-03T12:26:18+00:00"
+        },
+        {
+            "name": "filament/upgrade",
+            "version": "v3.2.73",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/filamentphp/upgrade.git",
+                "reference": "8542ae14e7328cee6c41eb4a9cab112fd146f506"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/filamentphp/upgrade/zipball/8542ae14e7328cee6c41eb4a9cab112fd146f506",
+                "reference": "8542ae14e7328cee6c41eb4a9cab112fd146f506",
+                "shasum": ""
+            },
+            "require": {
+                "nunomaduro/termwind": "^1.0|^2.0",
+                "php": "^8.1",
+                "rector/rector": "^1.0"
+            },
+            "bin": [
+                "bin/filament-v3"
+            ],
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Filament\\Upgrade\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Upgrade Filament v2 code to Filament v3.",
+            "homepage": "https://github.com/filamentphp/filament",
+            "support": {
+                "issues": "https://github.com/filamentphp/filament/issues",
+                "source": "https://github.com/filamentphp/filament"
+            },
+            "time": "2024-03-27T12:36:38+00:00"
         },
         {
             "name": "fruitcake/php-cors",
@@ -3976,6 +4016,64 @@
             "time": "2023-11-12T21:59:55+00:00"
         },
         {
+            "name": "phpstan/phpstan",
+            "version": "1.10.67",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phpstan/phpstan.git",
+                "reference": "16ddbe776f10da6a95ebd25de7c1dbed397dc493"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/16ddbe776f10da6a95ebd25de7c1dbed397dc493",
+                "reference": "16ddbe776f10da6a95ebd25de7c1dbed397dc493",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0"
+            },
+            "conflict": {
+                "phpstan/phpstan-shim": "*"
+            },
+            "bin": [
+                "phpstan",
+                "phpstan.phar"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "PHPStan - PHP Static Analysis Tool",
+            "keywords": [
+                "dev",
+                "static analysis"
+            ],
+            "support": {
+                "docs": "https://phpstan.org/user-guide/getting-started",
+                "forum": "https://github.com/phpstan/phpstan/discussions",
+                "issues": "https://github.com/phpstan/phpstan/issues",
+                "security": "https://github.com/phpstan/phpstan/security/policy",
+                "source": "https://github.com/phpstan/phpstan-src"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/ondrejmirtes",
+                    "type": "github"
+                },
+                {
+                    "url": "https://github.com/phpstan",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-16T07:22:02+00:00"
+        },
+        {
             "name": "psr/cache",
             "version": "3.0.0",
             "source": {
@@ -4739,6 +4837,65 @@
                 }
             ],
             "time": "2024-04-27T21:32:50+00:00"
+        },
+        {
+            "name": "rector/rector",
+            "version": "1.0.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rectorphp/rector.git",
+                "reference": "6e04d0eb087aef707fa0c5686d33d6ff61f4a555"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/6e04d0eb087aef707fa0c5686d33d6ff61f4a555",
+                "reference": "6e04d0eb087aef707fa0c5686d33d6ff61f4a555",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2|^8.0",
+                "phpstan/phpstan": "^1.10.57"
+            },
+            "conflict": {
+                "rector/rector-doctrine": "*",
+                "rector/rector-downgrade-php": "*",
+                "rector/rector-phpunit": "*",
+                "rector/rector-symfony": "*"
+            },
+            "suggest": {
+                "ext-dom": "To manipulate phpunit.xml via the custom-rule command"
+            },
+            "bin": [
+                "bin/rector"
+            ],
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Instant Upgrade and Automated Refactoring of any PHP code",
+            "keywords": [
+                "automation",
+                "dev",
+                "migration",
+                "refactoring"
+            ],
+            "support": {
+                "issues": "https://github.com/rectorphp/rector/issues",
+                "source": "https://github.com/rectorphp/rector/tree/1.0.4"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/tomasvotruba",
+                    "type": "github"
+                }
+            ],
+            "time": "2024-04-05T09:01:07+00:00"
         },
         {
             "name": "ryangjchandler/blade-capture-directive",

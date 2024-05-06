@@ -8,8 +8,8 @@ use Filament\Forms\Concerns\InteractsWithForms;
 use Filament\Forms\Contracts\HasForms;
 use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
-use Filament\Tables;
 use Livewire\Component;
 
 class PendingEmailsStudentPortalTable extends Component implements HasTable, HasForms
@@ -27,21 +27,19 @@ class PendingEmailsStudentPortalTable extends Component implements HasTable, Has
             ->query(PendingEmailsStudentPortal::query())
             ->query(Student::query())
             ->columns([
-                Tables\Columns\TextColumn::make('student_no')
-                    ->label('Student Number')
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('last_name')
-                    ->label('Last Name')
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('first_name')
-                    ->label('First Name')
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('middle_name')
-                    ->label('Middle Name')
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('plm_email')
-                    ->label('PLM Email Address')
-                    ->sortable(),
-            ]);
+                TextColumn::make('student_no')
+                    ->label('Student Number'),
+                TextColumn::make('last_name')
+                    ->label('Last Name'),
+                TextColumn::make('first_name')
+                    ->label('First Name'),
+                TextColumn::make('middle_name')
+                    ->label('Middle Name'),
+                TextColumn::make('plm_email')
+                    ->label('PLM Email Address'),
+                TextColumn::make('Status')
+                    ->default('Pending')
+            ])
+            ->defaultSort('student_no', 'asc');
     }
 }

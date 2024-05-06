@@ -1,6 +1,5 @@
 <?php
 
-use App\Livewire\ListPendingEmails;
 use Illuminate\Support\Facades\Route;
 
 Route::view('/', 'dashboard')

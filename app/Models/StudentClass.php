@@ -37,4 +37,9 @@ class StudentClass extends Model
     {
         return $this->belongsToMany(Student::class, 'assigned_classes');
     }
+
+    public function studentGrades(): HasMany
+    {
+        return $this->hasMany(StudentGrade::class);
+    }
 }

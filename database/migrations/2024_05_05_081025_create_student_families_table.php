@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('student_families', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->string('f_last_name');
             $table->string('f_first_name');
             $table->string('f_middle_name');
@@ -46,7 +45,7 @@ return new class extends Migration
             $table->string('g_office');
             $table->string('g_ofaddress');
             $table->string('g_ofnumber');
-            $table->int('annual_family_income');
+            $table->integer('annual_family_income');
         });
     }
 

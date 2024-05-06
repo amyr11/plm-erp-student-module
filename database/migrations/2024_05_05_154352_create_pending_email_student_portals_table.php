@@ -14,7 +14,6 @@ return new class extends Migration
         Schema::create('pending_email_student_portals', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('student_id')->constrained();
         });
     }
 

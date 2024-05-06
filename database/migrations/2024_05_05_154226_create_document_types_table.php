@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             $table->string('document_name');
-            $table->int('price');
+            $table->integer('price');
         });
     }
 

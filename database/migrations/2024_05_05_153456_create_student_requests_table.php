@@ -14,11 +14,10 @@ return new class extends Migration
         Schema::create('student_requests', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
             $table->date('date_requested');
             $table->date('date_of_payment');
             $table->enum('payment_mode', allowed: ['Cash', 'Online'])->default('Cash');
-            $table->int('amount_paid');
+            $table->integer('amount_paid');
             $table->string('receipt_no');
             $table->string('purpose');
             $table->date('expected_release');

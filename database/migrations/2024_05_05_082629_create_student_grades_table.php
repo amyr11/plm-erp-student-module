@@ -14,8 +14,6 @@ return new class extends Migration
         Schema::create('student_grades', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
-            $table->foreignId('class_id')->constrained()->cascadeOnDelete();
             $table->float('grade');
         });
     }

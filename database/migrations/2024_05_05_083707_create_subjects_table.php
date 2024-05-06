@@ -16,7 +16,7 @@ return new class extends Migration
             $table->timestamps();
             $table->string('subject_code');
             $table->string('subject_name');
-            $table->int('units');
+            $table->integer('units');
         });
     }
 

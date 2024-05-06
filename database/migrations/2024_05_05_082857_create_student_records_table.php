@@ -14,21 +14,20 @@ return new class extends Migration
         Schema::create('student_records', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('student_id')->constrained()->cascadeOnDelete();
-            $table->int('academic_year');
-            $table->int('semester');
+            $table->integer('academic_year');
+            $table->integer('semester');
             $table->date('date_enrolled');
-            $table->int('tuition_fee');
-            $table->int('library_fee');
-            $table->int('athletic_fee');
-            $table->int('medical_dental_fee');
-            $table->int('student_welfare');
-            $table->int('cultural_activity');
-            $table->int('guidance_fee');
-            $table->int('laboratory_fee');
-            $table->int('development_fund');
-            $table->int('ang_pamantasan_fee');
-            $table->int('ssc_fee');
+            $table->integer('tuition_fee');
+            $table->integer('library_fee');
+            $table->integer('athletic_fee');
+            $table->integer('medical_dental_fee');
+            $table->integer('student_welfare');
+            $table->integer('cultural_activity');
+            $table->integer('guidance_fee');
+            $table->integer('laboratory_fee');
+            $table->integer('development_fund');
+            $table->integer('ang_pamantasan_fee');
+            $table->integer('ssc_fee');
             $table->enum('fee_status', allowed: ['Paid', 'Not yet paid']);
         });
     }

@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('student_classes', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('professor_id');
-            $table->foreignId('subject_id')->cascadeOnDelete();
-            $table->foreignId('building_id');
-            $table->int('section');
+            $table->integer('section');
             $table->enum('day', allowed: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
             $table->time('start_time');
             $table->time('end_time');

@@ -11,11 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('assigned_classes', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
-            $table->integer('academic_year');
-            $table->integer('semester');
+        Schema::table('pending_email_student_portals', function (Blueprint $table) {
+            $table->foreignId('student_id')->constrained();
         });
     }
 
@@ -24,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('assigned_classes');
+        Schema::table('pending_email_student_portals', function (Blueprint $table) {
+            $table->dropForeign(['student_id']);
+        });
     }
 };

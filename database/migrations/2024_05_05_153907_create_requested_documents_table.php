@@ -14,8 +14,7 @@ return new class extends Migration
         Schema::create('requested_documents', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->foreignId('document_type_id')->constrained();
-            $table->int('no_of_copies');
+            $table->integer('no_of_copies');
             $table->enum('status', allowed: ['Pending', 'Ready'])->default('Pending');
         });
     }

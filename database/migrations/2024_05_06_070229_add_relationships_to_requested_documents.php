@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('requested_documents', function (Blueprint $table) {
+            $table->foreignId('student_request_id')->constrained()->cascadeOnDelete();
             $table->foreignId('document_type_id')->constrained();
             $table->foreignId('requested_document_status_id')->constrained();
         });
@@ -23,6 +24,7 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('requested_documents', function (Blueprint $table) {
+            $table->dropForeign(['student_request_id']);
             $table->dropForeign(['document_type_id']);
             $table->dropForeign(['requested_document_status_id']);
         });

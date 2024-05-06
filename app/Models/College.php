@@ -20,4 +20,9 @@ class College extends Model
     {
         return $this->hasMany(Student::class);
     }
+
+    public function degreePrograms(): HasMany
+    {
+        return $this->hasMany(DegreeProgram::class);
+    }
 }

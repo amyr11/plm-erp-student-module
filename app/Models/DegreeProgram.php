@@ -31,4 +31,9 @@ class DegreeProgram extends Model
     {
         return $this->belongsTo(Program::class);
     }
+
+    public function college(): BelongsTo
+    {
+        return $this->belongsTo(College::class);
+    }
 }

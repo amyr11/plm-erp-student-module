@@ -121,7 +121,7 @@
             </div>
             <!-- End Buttons Container -->
             <!-- Pending Credentials Table -->
-            <livewire:pending-emails-student-portal-table />
+            <livewire:list-pending-email-student-portal />
             <!-- End Pending Credentials Table -->
         </section>
         <!-- End Student Portal Account -->
@@ -224,7 +224,7 @@
             </div>
             <!-- End Buttons Container -->
             <!-- Pending Credentials Table -->
-            <livewire:pending-emails-plm-email-table />
+            <livewire:list-pending-email-p-l-m-email />
             <!-- End Pending Credentials Table -->
         </section>
         <!-- End PLM Email -->

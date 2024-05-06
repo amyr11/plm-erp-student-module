@@ -20,11 +20,6 @@ class Student extends Model
         'updated_at',
     ];
 
-    public function college(): BelongsTo
-    {
-        return $this->belongsTo(College::class);
-    }
-
     public function degreeProgram(): BelongsTo
     {
         return $this->belongsTo(DegreeProgram::class);

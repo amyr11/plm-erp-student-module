@@ -16,11 +16,6 @@ class College extends Model
         'updated_at',
     ];
 
-    public function students(): HasMany
-    {
-        return $this->hasMany(Student::class);
-    }
-
     public function degreePrograms(): HasMany
     {
         return $this->hasMany(DegreeProgram::class);

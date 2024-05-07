@@ -25,4 +25,9 @@ class StudentRecord extends Model
     {
         return $this->belongsTo(FeeStatus::class);
     }
+
+    public function academicYear(): BelongsTo
+    {
+        return $this->belongsTo(AcademicYear::class);
+    }
 }

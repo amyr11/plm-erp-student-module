@@ -43,13 +43,8 @@ class StudentClass extends Model
         return $this->belongsTo(Day::class);
     }
 
-    public function students(): BelongsToMany
+    public function assignedClasses(): HasMany
     {
-        return $this->belongsToMany(Student::class, 'assigned_classes');
-    }
-
-    public function studentGrades(): HasMany
-    {
-        return $this->hasMany(StudentGrade::class);
+        return $this->hasMany(AssignedClass::class);
     }
 }

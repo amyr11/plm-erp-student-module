@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('fee_statuses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->integer('fee_status');
+            $table->string('fee_status');
         });
     }
 

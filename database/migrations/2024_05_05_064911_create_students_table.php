@@ -21,8 +21,7 @@ return new class extends Migration
             $table->string('suffix')->nullable();
             $table->date('birthdate');
             $table->string('religion');
-            $table->date('entry_year');
-            $table->integer('year_level');
+            $table->date('entry_date');
             $table->date('graduation_date')->nullable();
             $table->string('permanent_address');
             $table->string('plm_email')->unique();

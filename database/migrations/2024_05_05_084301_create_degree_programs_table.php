@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('degree_programs', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->string('degree_program');
         });
     }
 

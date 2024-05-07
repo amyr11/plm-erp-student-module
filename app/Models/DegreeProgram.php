@@ -22,16 +22,6 @@ class DegreeProgram extends Model
         return $this->hasMany(Student::class);
     }
 
-    public function degree(): BelongsTo
-    {
-        return $this->belongsTo(Degree::class);
-    }
-
-    public function program(): BelongsTo
-    {
-        return $this->belongsTo(Program::class);
-    }
-
     public function college(): BelongsTo
     {
         return $this->belongsTo(College::class);

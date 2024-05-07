@@ -55,14 +55,9 @@ class Student extends Model
         return $this->hasOne(StudentFamily::class);
     }
 
-    public function studentClasses(): BelongsToMany
+    public function assignedClasses(): HasMany
     {
-        return $this->belongsToMany(StudentClass::class, 'assigned_classes');
-    }
-
-    public function studentGrades(): HasMany
-    {
-        return $this->hasMany(StudentGrade::class);
+        return $this->hasMany(AssignedClass::class);
     }
 
     public function studentRecords(): HasMany
@@ -78,5 +73,10 @@ class Student extends Model
     public function studentRequests(): HasMany
     {
         return $this->hasMany(StudentRequest::class);
+    }
+
+    public function academicYear(): BelongsTo
+    {
+        return $this->belongsTo(AcademicYear::class);
     }
 }

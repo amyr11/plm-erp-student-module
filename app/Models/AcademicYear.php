@@ -6,18 +6,24 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
-class Degree extends Model
+class AcademicYear extends Model
 {
     use HasFactory;
 
+    public $incrementing = false;
+
     protected $guarded = [
-        'id',
         'created_at',
         'updated_at',
     ];
 
-    public function degreePrograms(): HasMany
+    public function students(): HasMany
     {
-        return $this->hasMany(DegreeProgram::class);
+        return $this->hasMany(Student::class);
+    }
+
+    public function studentRecords(): HasMany
+    {
+        return $this->hasMany(StudentRecord::class);
     }
 }

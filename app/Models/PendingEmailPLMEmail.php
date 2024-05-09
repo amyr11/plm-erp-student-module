@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class PendingEmailPLMEmail extends Model
 {
@@ -16,8 +16,8 @@ class PendingEmailPLMEmail extends Model
         'updated_at',
     ];
 
-    public function students(): HasMany
+    public function student(): BelongsTo
     {
-        return $this->hasMany(Student::class);
+        return $this->belongsTo(Student::class, 'student_id', 'id');
     }
 }

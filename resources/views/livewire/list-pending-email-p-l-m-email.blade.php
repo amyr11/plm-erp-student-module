@@ -1,3 +1,3 @@
 <div class="relative overflow-x-auto">
-    {{ $this->table }}
+    {{ $this->table->render() }}
 </div>

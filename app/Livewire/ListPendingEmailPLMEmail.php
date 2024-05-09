@@ -24,22 +24,25 @@ class ListPendingEmailPLMEmail extends Component implements HasTable, HasForms
     public function table(Table $table): Table
     {
         return $table
-            ->query(PendingEmailPLMEmail::query())
-            ->query(Student::query())
+            ->query(
+                PendingEmailPLMEmail::with('student')
+                ->join('students', 'pending_email_p_l_m_emails.student_id', '=', 'students.id')
+            )
             ->columns([
-                TextColumn::make('student_no')
-                    ->label('Student Number'),
-                TextColumn::make('last_name')
+                TextColumn::make('student.student_no')
+                    ->label('Student Number')
+                    ->sortable(),
+                TextColumn::make('student.last_name')
                     ->label('Last Name'),
-                TextColumn::make('first_name')
+                TextColumn::make('student.first_name')
                     ->label('First Name'),
-                TextColumn::make('middle_name')
+                TextColumn::make('student.middle_name')
                     ->label('Middle Name'),
-                TextColumn::make('plm_email')
+                TextColumn::make('student.plm_email')
                     ->label('PLM Email Address'),
                 TextColumn::make('Status')
-                    ->default('Pending')
+                    ->default('Pending'),
             ])
-            ->defaultSort('student_no', 'asc');
+            ->defaultSort('student.student_no', 'asc');
     }
 }

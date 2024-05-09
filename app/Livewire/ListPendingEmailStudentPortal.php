@@ -10,6 +10,9 @@ use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Str;
+use Illuminate\Database\Eloquent\Builder;
+
 
 class ListPendingEmailStudentPortal extends Component implements HasTable, HasForms
 {
@@ -23,10 +26,7 @@ class ListPendingEmailStudentPortal extends Component implements HasTable, HasFo
     public function table(Table $table): Table
     {
         return $table
-            ->query(
-                PendingEmailStudentPortal::with('student')
-                ->join('students', 'pending_email_student_portals.student_id', '=', 'students.id')
-            )
+            ->query(PendingEmailStudentPortal::with('student'))
             ->columns([
                 TextColumn::make('student.student_no')
                     ->label('Student Number')
@@ -37,11 +37,12 @@ class ListPendingEmailStudentPortal extends Component implements HasTable, HasFo
                     ->label('First Name'),
                 TextColumn::make('student.middle_name')
                     ->label('Middle Name'),
-                TextColumn::make('student.entry_date')
-                    ->label('Entry Date'),
+                TextColumn::make('student.personal_email')
+                    ->label('Personal Email'),
                 TextColumn::make('Status')
                     ->default('Pending'),
             ])
-            ->defaultSort('student.student_no', 'asc');
+            ->defaultSort('student.student_no', 'asc')
+            ->paginated(false);
     }
 }

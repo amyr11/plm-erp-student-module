@@ -12,6 +12,7 @@ use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
 
+
 class ListPendingEmailStudentPortal extends Component implements HasTable, HasForms
 {
     use InteractsWithTable, InteractsWithForms;
@@ -24,8 +25,8 @@ class ListPendingEmailStudentPortal extends Component implements HasTable, HasFo
     public function table(Table $table): Table
     {
         return $table
-            ->query((PendingEmailStudentPortal::query()))
-            ->query((Student::query()))
+            ->query(PendingEmailStudentPortal::query())
+            ->query(Student::query())
             ->columns([
                 TextColumn::make('student_no')
                     ->label('Student Number'),
@@ -35,8 +36,8 @@ class ListPendingEmailStudentPortal extends Component implements HasTable, HasFo
                     ->label('First Name'),
                 TextColumn::make('middle_name')
                     ->label('Middle Name'),
-                TextColumn::make('entry_year')
-                    ->label('Entry Year'),
+                TextColumn::make('entry_date')
+                    ->label('Entry Date'),
                 TextColumn::make('Status')
                     ->default('Pending')
             ])

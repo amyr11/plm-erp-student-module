@@ -1,3 +1,5 @@
+@props(['title' => 'My Custom Title'])
+
 <header>
     <div class="flex items-center mt-4 mb-4">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">

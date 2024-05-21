@@ -24,23 +24,39 @@ class ListPendingEmailPLMEmail extends Component implements HasTable, HasForms
     public function table(Table $table): Table
     {
         return $table
-            ->query(PendingEmailPLMEmail::with('student'))
+            ->query(
+                PendingEmailPLMEmail::query()
+                    ->join('students', 'pending_email_p_l_m_emails.student_id', '=', 'students.id')
+                    ->select('pending_email_p_l_m_emails.*', 'students.student_no', 'students.last_name', 'students.first_name', 'students.middle_name', 'students.personal_email')
+            )
             ->columns([
-                TextColumn::make('student.student_no')
+                TextColumn::make('student_no')
                     ->label('Student Number')
-                    ->sortable(),
-                TextColumn::make('student.last_name')
-                    ->label('Last Name'),
-                TextColumn::make('student.first_name')
-                    ->label('First Name'),
-                TextColumn::make('student.middle_name')
-                    ->label('Middle Name'),
-                TextColumn::make('student.personal_email')
-                    ->label('Personal Email'),
-                TextColumn::make('Status')
-                    ->default('Pending'),
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('last_name')
+                    ->label('Last Name')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('first_name')
+                    ->label('First Name')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('middle_name')
+                    ->label('Middle Name')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('personal_email')
+                    ->label('Personal Email')
+                    ->sortable()
+                    ->searchable(),
+                TextColumn::make('status')
+                    ->label('Status')
+                    ->default('Pending')
+                    ->sortable()
+                    ->searchable(),
             ])
-            ->defaultSort('student.student_no', 'asc')
-            ->paginated(false);
+            ->defaultSort('student_no', 'asc')
+            ->paginated();
     }
 }

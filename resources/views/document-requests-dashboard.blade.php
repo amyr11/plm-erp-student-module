@@ -1,5 +1,3 @@
-@filamentStyles
-
 <x-app-layout>
     <!-- Header -->
     <x-header title="Document Requests" />

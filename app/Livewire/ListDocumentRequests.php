@@ -65,7 +65,6 @@ class ListDocumentRequests extends Component implements HasTable, HasForms
             TextColumn::make('status')
                 ->label('Status'),
         ])
-        ->defaultSort('student_no', 'asc')
-        ->paginated(false);
+        ->defaultSort('student_no', 'asc');
     }
 }

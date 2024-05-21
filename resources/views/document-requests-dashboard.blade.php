@@ -1,8 +1,10 @@
 <x-app-layout>
     <!-- Header -->
-    <x-header title="Document Requests" />
+    <div class="mb-8">
+        <x-header title="Document Requests" />
+    </div>
     <!-- Buttons Container -->
-    <div class="flex items-center space-x-2.5">
+    <div class="flex items-center space-x-2.5 mb-6">
         <!-- Search Bar -->
         <?php $id = "documentSearch"; ?>
         <x-search-bar :id="$id" />

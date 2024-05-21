@@ -10,6 +10,7 @@ use Filament\Tables\Concerns\InteractsWithTable;
 use Filament\Tables\Contracts\HasTable;
 use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Table;
+use Illuminate\Support\Facades\DB; // Make sure to include this
 
 class ListDocumentRequests extends Component implements HasTable, HasForms
 {
@@ -34,8 +35,20 @@ class ListDocumentRequests extends Component implements HasTable, HasForms
                     'students.id',
                     'students.student_no',
                     'payment_modes.mode',
-                    'document_types.document_name',
-                    'requested_documents.no_of_copies',
+                    'student_requests.id as request_id',
+                    'student_requests.purpose',
+                    'student_requests.amount_paid',
+                    'student_requests.receipt_no',
+                    'student_requests.date_of_payment',
+                    'student_request_statuses.status',
+                    DB::raw('GROUP_CONCAT(document_types.document_name SEPARATOR ", ") as document_names'),
+                    DB::raw('SUM(requested_documents.no_of_copies) as total_copies')
+                )
+                ->groupBy(
+                    'students.id',
+                    'students.student_no',
+                    'payment_modes.mode',
+                    'student_requests.id',
                     'student_requests.purpose',
                     'student_requests.amount_paid',
                     'student_requests.receipt_no',
@@ -49,10 +62,11 @@ class ListDocumentRequests extends Component implements HasTable, HasForms
                 ->sortable(),
             TextColumn::make('mode')
                 ->label('Payment Mode'),
-            TextColumn::make('document_name')
-                ->label('Document Type'),
-            TextColumn::make('no_of_copies')
-                ->label('Number of Copies'),
+            TextColumn::make('document_names')
+                ->label('Document Types'),
+            TextColumn::make('total_copies')
+                ->label('Number of Copies')
+                ->sortable(),
             TextColumn::make('purpose')
                 ->label('Purpose'),
             TextColumn::make('amount_paid')

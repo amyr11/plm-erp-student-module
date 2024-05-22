@@ -61,23 +61,30 @@ class ListDocumentRequests extends Component implements HasTable, HasForms
                 ->label('Student Number')
                 ->sortable(),
             TextColumn::make('mode')
-                ->label('Payment Mode'),
+                ->label('Payment Mode')
+                ->sortable(),
             TextColumn::make('document_names')
-                ->label('Document Types'),
+                ->label('Document Types')
+                ->sortable(),
             TextColumn::make('total_copies')
                 ->label('Number of Copies')
                 ->sortable(),
             TextColumn::make('purpose')
-                ->label('Purpose'),
+                ->label('Purpose')
+                ->sortable(),
             TextColumn::make('amount_paid')
-                ->label('Amount Paid'),
+                ->label('Amount Paid')
+                ->sortable(),
             TextColumn::make('receipt_no')
-                ->label('Receipt Number'),
+                ->label('Receipt Number')
+                ->sortable(),
             TextColumn::make('date_of_payment')
                 ->label('Date of Payment')
-                ->date(),
+                ->date()
+                ->sortable(),
             TextColumn::make('status')
-                ->label('Status'),
+                ->label('Status')
+                ->sortable(),
         ])
         ->defaultSort('student_no', 'asc');
     }
